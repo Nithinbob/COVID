@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment2">
+      <ProgressBar
+          android:id="@+id/progressBar2"
+          style="?android:attr/progressBarStyle"
+          android:layout_width="129dp"
+          android:layout_height="135dp"
+          android:layout_marginLeft="120dp"
+          android:layout_marginTop="400dp"
+          android:innerRadiusRatio="2.5"
+          android:progressDrawable="@drawable/circle2"
+          android:thickness="5dp" />
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      android:id="@+id/appbar">
+
+      <com.google.android.material.appbar.CollapsingToolbarLayout
+          android:id="@+id/collapse"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/back"
+          app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+          app:contentScrim="@color/colorPrimary"
+
+          app:expandedTitleMarginEnd="64dp"
+          app:expandedTitleMarginStart="48dp"
+          app:layout_scrollFlags="exitUntilCollapsed|scroll"
+          app:title="History"
+          >
+
+            <LinearLayout
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="59dp"
+                android:orientation="vertical"
+
+                >
+
+                  <TextView
+                      android:id="@+id/today"
+                      android:layout_width="match_parent"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:layout_marginStart="5dp"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/white"
+                      android:textSize="23sp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/IndividualsTested"
+                      android:layout_width="match_parent"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="20sp" />
+
+                  <TextView
+                      android:id="@+id/individualsTestednum"
+                      android:layout_width="80dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:layout_marginStart="5dp"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="19sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginTop="200dp"
+                android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/positivecases"
+                      android:layout_width="152dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="20sp" />
+
+                  <TextView
+                      android:id="@+id/positivenum"
+                      android:layout_width="80dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="155dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="200dp"
+                android:orientation="vertical">
+
+                  <TextView
+                      android:id="@+id/SamplesTested"
+                      android:layout_width="155dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="10dp"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="20sp" />
+
+                  <TextView
+                      android:id="@+id/samplesTestednum"
+                      android:layout_width="80dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="center"
+                      android:gravity="center_vertical"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="22sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:background="@color/colorYellow"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+      </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycle2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:listitem="@layout/cardview2"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+<!--      <ListView-->
+<!--          android:id="@+id/list2"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          tools:listitem="@layout/cardview2" />-->
+
+
+</androidx.recyclerview.widget.RecyclerView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
